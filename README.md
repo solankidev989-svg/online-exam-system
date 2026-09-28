@@ -1,43 +1,20 @@
-# 📝 Online Exam System
-
-A web-based online examination system built with **Python (Flask)** and **MySQL**. Admins create exams and MCQ questions, students take timed tests and get instant results.
+# Online Exam System (Python Flask + MySQL)
 
 ## Features
-- Student registration and login (passwords are hashed)
-- Admin panel: create/delete exams, add/delete MCQ questions, view all results
-- Timed exams with countdown and auto-submit
-- Instant result with score, percentage and pass/fail
-- One attempt per student per exam
-
-## Tech Stack
-- Backend: Python, Flask
-- Database: MySQL
-- Frontend: HTML, CSS, JavaScript (Jinja2 templates)
-
-## Project Structure
-```
-online_exam_system/
-├── app.py            # routes and logic
-├── config.py         # database settings
-├── schema.sql        # database tables + sample exam
-├── requirements.txt
-└── templates/        # HTML pages
-```
+- Student registration / login (hashed passwords)
+- Admin: exam create/delete, MCQ questions add/delete, sabhi results dekhna
+- Student: exams list, timer ke saath exam, auto-submit, instant result (score, %, pass/fail)
+- Ek student ek exam sirf ek baar de sakta hai
 
 ## Setup
-1. Clone the repo:
-   `git clone https://github.com/solankidev989-svg/online-exam-system.git`
-2. Install dependencies: `pip install -r requirements.txt`
-3. Import the database: `mysql -u root -p < schema.sql`
-4. Open `config.py` and set your MySQL password.
-5. Run: `python app.py`
-6. Open http://127.0.0.1:5000
+1. Python 3 + MySQL install hona chahiye.
+2. `pip install -r requirements.txt`
+3. MySQL mein schema import karo:  `mysql -u root -p < schema.sql`
+4. `config.py` mein apna MySQL password daalo.
+5. Run: `python app.py`  ->  http://127.0.0.1:5000
 
-## Default Admin Login
-- Email: `admin@exam.com`
-- Password: `admin123`
+## Default Admin
+Email: admin@exam.com | Password: admin123  (pehli run par auto-create hota hai)
 
-(Change this after the first login/setup.)
-
-## Author
-**Dev Solanki** — 
+## Structure
+app.py (routes + logic) | config.py | schema.sql | templates/ (HTML pages)
